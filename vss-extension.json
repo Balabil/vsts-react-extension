@@ -1,13 +1,21 @@
 {
     "manifestVersion": 1,
     "id": "mw-dashboard",
-    "publisher": "JanNovotny",
-    "version": "0.0.5",
-    "name": "MultiWeb Dashboard",
+    "publisher": "NabilGhayyda",
+    "version": "0.1",
+    "name": "Monthly PR Report",
     "description": "A Visual Studio Services extension for MultiWeb's purposes",
     "public": false,
-    "baseUri": "https://localhost:3000",
-    "categories": ["Azure Repos"],
+    "categories": [
+        "Azure Repos"
+    ],
+    "scopes": [
+        "vso.work",
+        "vso.code_write",
+        "vso.build_execute",
+        "vso.build",
+        "vso.code"
+    ],
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -16,8 +24,12 @@
     "files": [
         {
             "path": "build",
-            "addressable": true, 
+            "addressable": true,
             "packagePath": "/"
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true
         }
     ],
     "contributions": [
@@ -28,7 +40,7 @@
                 "ms.vss-code-web.code-hub-group"
             ],
             "properties": {
-                "name": "MW PRs",
+                "name": "Monthly PR Report",
                 "uri": "index.html"
             }
         }

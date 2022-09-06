@@ -17,12 +17,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "noImplicitAny": false
   },
   "include": [
     "src"
   ],
   "types": [
     "vss-web-extension-sdk"
+  ],
+  "typeRoots": [
+    "./typings",
+    "./node_modules/@types/"
   ]
 }

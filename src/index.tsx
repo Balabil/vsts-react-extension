@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
 // Initialize the VSS sdk
 VSS.init({
     usePlatformScripts: true,
     usePlatformStyles: true
 });
 
+
 VSS.ready(function() {
-    ReactDOM.render(<App />, document.getElementById('root'));
+    ReactDOM.render(<App />, document.getElementById('root'))   
 });
 
 /*VSS.require(["dist/appx"], function () { 
